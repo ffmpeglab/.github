@@ -242,31 +242,24 @@ services:
 | Guide | Description |
 |-------|-------------|
 | [Agent‑First Setup](https://ffmpeglab.com/articles/agent-first-setup-ffmpeglab-server.html) | Complete setup guide with self‑hosted Supabase |
-| [Debugging & Troubleshooting](https://ffmpeglab.com/articles/ffmpeglab-debugging.html) | Master `-loglevel` and filtergraph errors |
-| [Dynamic Runtime Commands](https://ffmpeglab.com/articles/ffmpeglab-dynamic-runtime-commands.html) | `sendcmd` and `zmq` for real‑time changes |
-| [Hardware Acceleration](https://ffmpeglab.com/articles/ffmpeglab-hardware-acceleration.html) | NVENC, QSV, VAAPI deep dive |
-| [Video Denoising](https://ffmpeglab.com/articles/ffmpeglab-video-denoising.html) | Remove noise with `hqdn3d`, `nlmeans`, `bm3d` |
-| [Lens Correction](https://ffmpeglab.com/articles/ffmpeglab-lens-correction.html) | Correct GoPro fisheye and barrel distortion |
-| [Slideshow Creation](https://ffmpeglab.com/articles/ffmpeglab-slideshow-creation.html) | Ken Burns, transitions, and music |
-| [YAML to SQL Transpiler](https://ffmpeglab.com/articles/ffmpeglab-yaml-to-sql.html) | Define pipelines declaratively |
+| [Debugging & Troubleshooting](https://www.ffmpeglab.com/articles/ffmpeg-debugging-troubleshooting-guide.html) | Master `-loglevel` and filtergraph errors |
+| [Dynamic Runtime Commands](https://www.ffmpeglab.com/articles/ffmpeg-dynamic-runtime-commands.html) | `sendcmd` and `zmq` for real‑time changes |
+| [Video Denoising](https://www.ffmpeglab.com/articles/ffmpeg-video-denoising.html) | Remove noise with `hqdn3d`, `nlmeans`, `bm3d` |
 
 ### SQL Pipeline Templates
 
 | Pipeline | Description |
 |----------|-------------|
-| [Video Onboarding](https://ffmpeglab.com/articles/ultimate-video-onboarding-pipeline.html) | Thumbnails, resized videos, real‑time notifications |
-| [Audio Processing](https://ffmpeglab.com/articles/audio-processing-podcast-pipeline.html) | Loudness normalization, noise reduction, waveforms |
-| [AI Upscaling](https://ffmpeglab.com/articles/ai-upscaling-pipeline.html) | DNN‑based super‑resolution (2×, 3×, 4×) |
-| [Subtitle Generation](https://ffmpeglab.com/articles/automated-subtitle-generation-pipeline.html) | Whisper AI transcription and burn‑in |
-| [Video Labeling](https://ffmpeglab.com/articles/video-labeling-dnn-pipeline.html) | Object detection and classification |
+| [Video Onboarding](https://www.ffmpeglab.com/articles/ultimate-video-onboarding-pipeline-sql-triggers-supabase.html)| Thumbnails, resized videos, real‑time notifications |
+| [Audio Processing](https://www.ffmpeglab.com/articles/audio-processing-podcast-pipeline-sql-triggers-supabase.html) | Loudness normalization, noise reduction, waveforms |
+| [Subtitle Generation](https://www.ffmpeglab.com/articles/automated-subtitle-generation-pipeline-sql-triggers-supabase.html)| Whisper AI transcription and burn‑in |
 
 ### Guides for Enterprise & Teams
 
 | Guide | Description |
 |-------|-------------|
-| [Figma for Video](https://ffmpeglab.com/articles/figma-for-video.html) | Collaborative video editing with templates |
-| [Environment Variables & Runners](https://ffmpeglab.com/articles/env-vars-scalable-runners.html) | Scale your rendering pipeline |
-| [FFmpeg GUI Libraries](https://ffmpeglab.com/articles/ffmpeg-gui-libraries.html) | Comparison of 12+ frontends |
+| [Figma for Video](https://www.ffmpeglab.com/articles/figma-for-video-collaborative-editing.html) | Collaborative video editing with templates |
+| [Environment Variables & Runners](https://www.ffmpeglab.com/articles/ffmpeg-env-vars-scalable-runners.html)) | Scale your rendering pipeline |
 
 ---
 
