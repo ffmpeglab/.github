@@ -3,7 +3,7 @@
 **The FFmpeg runtime — run entirely in your browser & then scale to your servers.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Stars](https://img.shields.io/github/stars/ffmpeglab/.github)](https://github.com/ffmpeglab/.github/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/ffmpeglab/server)](https://github.com/ffmpeglab/server/stargazers)
 
 ---
 
