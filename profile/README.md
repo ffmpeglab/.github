@@ -42,7 +42,7 @@ FFmpegLab is a **complete ecosystem for video processing** — from a browser‑
 
 The fastest way to try FFmpegLab is to open the webapp:
 
-👉 **[ffmpeglab.com/webapp](https://ffmpeglab.com/webapp)**
+👉 **[webapp.ffmpeglab.com/webapp](https://webapp.ffmpeglab.com/webapp)**
 
 No account, no download, no installation. Just open the link and start editing.
 
