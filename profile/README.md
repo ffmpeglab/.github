@@ -301,9 +301,7 @@ FFmpegLab is open source and community‑driven. We welcome contributions of all
 
 ### Join the Community
 
-- **Discord**: [discord.gg/ffmpeglab](https://discord.gg/ffmpeglab)
-- **Twitter**: [@ffmpeglab](https://twitter.com/ffmpeglab)
-- **GitHub Discussions**: [github.com/ffmpeglab/webapp/discussions](https://github.com/ffmpeglab/webapp/discussions)
+- **GitHub Discussions**: [github.com/ffmpeglab/webapp/discussions](https://github.com/ffmpeglab/server/discussions)
 
 ---
 
@@ -325,4 +323,4 @@ FFmpegLab is open source and available under the [MIT License](LICENSE).
 
 **Run the whole editing pipeline on your own infrastructure. Open source and offline-first. Free in your browser to start.**
 
-[![Star on GitHub](https://img.shields.io/github/stars/ffmpeglab/.github?style=social)](https://github.com/ffmpeglab/.github)
+[![Star on GitHub](https://img.shields.io/github/stars/ffmpeglab/server?style=social)](https://github.com/ffmpeglab/server)
