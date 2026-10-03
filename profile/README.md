@@ -31,6 +31,7 @@ FFmpegLab is a **complete ecosystem for video processing** — from a browser‑
 | **[ffmpeglab/webapp](https://github.com/ffmpeglab/webapp)** | Browser‑based IDE running FFmpeg via WebAssembly |
 | **[ffmpeglab/server](https://github.com/ffmpeglab/server)** | API server with PostgreSQL, pgmq, and Supabase Storage |
 | **[ffmpeglab/ffmpeglab.com](https://github.com/ffmpeglab/ffmpeglab.com)** | Documentation, guides, and deployment scripts |
+| **[ffmpeglab/ffprobe-browser](https://github.com/ffmpeglab/ffprobe-wasm)** | FFProbe implementation for the Browser |
 
 > **Everything runs on your own infrastructure. Open source. Self‑hosted. Privacy‑first.**
 
