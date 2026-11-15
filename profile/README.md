@@ -142,56 +142,107 @@ Deploy the API, self-hosted Supabase, and runners using Docker Compose.
 ```yaml
 networks:
   isolated:
-    internal: true
-  public:
-
+    internal: true   # No external connectivity
+  public:   # Standard bridge network, created by Compose on docker compose up
 services:
   api:
+    restart: unless-stopped
     image: ffmpeglab/server
-    ports: ["3000:3000"]
+    ports:
+      - "3000:3000"
     environment:
       - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PORT=${DB_PORT}
+      - DB_PASSWORD=${DB_PASSWORD}
       - DB_NAME=${DB_NAME}
-      - SUPABASE_URL=${SUPABASE_URL}
+      - S3_BUCKET_ID=${S3_BUCKET_ID}
+      - S3_ACCESS_KEY=${S3_ACCESS_KEY}
+      - S3_SECRET_KEY=${S3_SECRET_KEY}
+      - S3_REGION=${S3_REGION}
+      - S3_ENDPOINT=${S3_ENDPOINT}
+      - WEBAPP_HOST=${WEBAPP_HOST}
       - SUPABASE_SECRET_KEY=${SUPABASE_SECRET_KEY}
+      - SUPABASE_JWKS_URL=${SUPABASE_JWKS_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+      - SUPABASE_PROJECT_ID=${SUPABASE_PROJECT_ID}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_PUBLISHABLE_KEY=${SUPABASE_PUBLISHABLE_KEY}
+      - PIPELINES_API_ENABLED=${PIPELINES_API_ENABLED}
+      - S3_PUBLIC_BUCKET_ID=${S3_PUBLIC_BUCKET_ID}
     networks:
       - isolated
       - public
-  
   render-runner:
-    image: ffmpeglab/server
-    deploy:
-      replicas: 2
+    restart: unless-stopped
     security_opt:
       - seccomp:unconfined
       - apparmor:unconfined
+    depends_on:
+      - api
+    image: ffmpeglab/server
+    deploy:
+      replicas: 2
     cap_add:
-      - SYS_ADMIN # Required for bubblewrap sandboxing
+      - SYS_ADMIN
     environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PORT=${DB_PORT}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - S3_BUCKET_ID=${S3_BUCKET_ID}
+      - S3_ACCESS_KEY=${S3_ACCESS_KEY}
+      - S3_SECRET_KEY=${S3_SECRET_KEY}
+      - SUPABASE_URL=${SUPABASE_URL}
+      - S3_REGION=${S3_REGION}
+      - S3_ENDPOINT=${S3_ENDPOINT}
+      - GIT_HTTPS_TOKEN=${GIT_HTTPS_TOKEN}
+      - GIT_CLONE_TIMEOUT_MS=300000
+      - GIT_MAX_REPO_BYTES=524288000
+      - PLATFORM_HOST=${PLATFORM_HOST}
+      - PLATFORM_ACCESS_TOKEN=${PLATFORM_ACCESS_TOKEN}
       - IS_RENDER_RUNNER=true
-      - GIT_HTTPS_TOKEN=${GIT_HTTPS_TOKEN}
-      - PLATFORM_HOST=${PLATFORM_HOST}
+      - S3_PUBLIC_BUCKET_ID=${S3_PUBLIC_BUCKET_ID}
     networks:
       - isolated
       - public
-      
-  task-runner:
-    image: ffmpeglab/server
-    environment:
-      - IS_TASK_RUNNER=true
-      - OTARI_API_KEY=${OTARI_API_KEY}
-      - GIT_HTTPS_TOKEN=${GIT_HTTPS_TOKEN}
-      - PLATFORM_HOST=${PLATFORM_HOST}
-    networks:
-      - isolated
-      - public
-
   logs-runner:
+    restart: unless-stopped
+    depends_on:
+      - api
     image: ffmpeglab/server
     environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PORT=${DB_PORT}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
       - IS_LOGS_RUNNER=true
     networks:
       - isolated
+      - public
+  task-runner:
+    restart: unless-stopped
+    depends_on:
+      - api
+    image: ffmpeglab/server
+    environment:
+      - DB_HOST=${DB_HOST}
+      - DB_USER=${DB_USER}
+      - DB_PORT=${DB_PORT}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_NAME=${DB_NAME}
+      - GIT_HTTPS_TOKEN=${GIT_HTTPS_TOKEN}
+      - GIT_CLONE_TIMEOUT_MS=300000
+      - GIT_MAX_REPO_BYTES=524288000
+      - PLATFORM_HOST=${PLATFORM_HOST}
+      - PLATFORM_ACCESS_TOKEN=${PLATFORM_ACCESS_TOKEN}
+      - OTARI_API_KEY=${OTARI_API_KEY}
+      - IS_TASK_RUNNER=true
+    networks:
+      - isolated
+      - public
 ```
 
 ### 3. Connect a Repo
