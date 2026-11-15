@@ -25,6 +25,16 @@ Most media APIs are black boxes: you send a command, you get a file, and you hav
 
 Whether you are running a massive SaaS or just automating your own media pipeline, FFmpegLab gives you the primitives to do it securely and reproducibly.
 
+FFmpegLab is a **complete ecosystem for video processing** — from a browser‑based IDE to a scalable, self‑hostable rendering backend.
+
+| Component | Description |
+|-----------|-------------|
+| **[ffmpeglab/webapp](https://github.com/ffmpeglab/webapp)** | Browser‑based IDE running FFmpeg via WebAssembly |
+| **[ffmpeglab/server](https://github.com/ffmpeglab/server)** | API server with PostgreSQL, pgmq, and Supabase Storage |
+| **[ffmpeglab/ffmpeglab.com](https://github.com/ffmpeglab/ffmpeglab.com)** | Documentation, guides, and deployment scripts |
+| **[ffmpeglab/ffprobe-browser](https://github.com/ffmpeglab/ffprobe-wasm)** | FFProbe implementation for the Browser |
+
+> **Everything runs on your own infrastructure. Open source. Self‑hosted. Privacy‑first.**
 ---
 
 ## The Three Pillars
