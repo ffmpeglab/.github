@@ -1,15 +1,17 @@
-<div align="center">
-  # FFmpegLab
+
+# 🎬 FFmpegLab
+
+  **The FFmpeg runtime — run entirely in your browser & then scale to your servers.**
   
   **Open Source FFmpeg API, Coding Agent & Render Marketplace.**
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
   [![GitHub Stars](https://img.shields.io/github/stars/ffmpeglab/server)](https://github.com/ffmpeglab/server)
   
-  *FFmpegLab is the framework for securing and running ffmpeg. Query your entire media catalog via SQL/API, define complex filter graphs with JSON, and run FFmpeg renders wrapped in the `bubblewrap` command line framework.*
+  *FFmpegLab is the framework for securing and scaling ffmpeg. Query your entire media catalog via SQL/API, define complex filter graphs with JSON, and run FFmpeg renders wrapped in the `bubblewrap` command line framework.*
   
   PostgreSQL • Supabase • S3 • Whisper AI • FFmpeg • Self-hostable • Open-source • pgmq • bubblewrap
-</div>
+
 
 ---
 
