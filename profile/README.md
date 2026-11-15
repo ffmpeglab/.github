@@ -36,6 +36,42 @@ FFmpegLab is a **complete ecosystem for video processing** — from a browser‑
 
 > **Everything runs on your own infrastructure. Open source. Self‑hosted. Privacy‑first.**
 ---
+---
+
+## Quick Start
+
+### 🌐 Try FFmpegLab in Your Browser
+
+The fastest way to try FFmpegLab is to open the webapp:
+
+👉 **[webapp.ffmpeglab.com/webapp](https://webapp.ffmpeglab.com/webapp)**
+
+No account, no download, no installation. Just open the link and start editing.
+
+### 🏠 One‑Line Install (Self‑Hosted Supabase)
+
+To deploy the complete FFmpegLab stack with self‑hosted Supabase:
+
+```bash
+curl -sSL https://ffmpeglab.com/sh/install.sh | bash
+```
+
+This script will:
+1. Clone and configure a self‑hosted Supabase instance
+2. Enable pgmq and create the `rendering_queue`
+3. Create storage buckets with RLS policies
+4. Deploy FFmpegLab Server with Docker Compose
+5. Generate an API key for authentication
+
+### 📦 Deploy with GitHub Pages
+
+Fork and deploy the webapp for free:
+
+1. **Fork** [ffmpeglab/webapp](https://github.com/ffmpeglab/webapp)
+2. **Enable GitHub Pages** — Settings → Pages → `main` branch → `/(root)`
+3. **Access** your instance at `https://yourusername.github.io/webapp`
+
+---
 
 ## The Three Pillars
 
